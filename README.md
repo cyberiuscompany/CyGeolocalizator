@@ -49,11 +49,25 @@ Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubica
   <img src="resultado tras el login venta de foto pack.png" alt="Banner" width="500"/>
 </p
 
-## 📸 Panel oculto de control de los usuarios ingresados 
+## 📸 Panel oculto de control de los usuarios ingresados (Sin Foto)
 
 <p align="center">
   <img src="panel control usuarios comprometidos.png" alt="Banner" width="500"/>
 </p
+
+## 📸 Panel oculto de control de los usuarios ingresados (Con Foto)
+
+<p align="center">
+  <img src="caso con foto de la webcam.png" alt="Banner" width="500"/>
+</p
+
+## 📸 Foto Victima Zoom
+
+<p align="center">
+  <img src="foto zoom.png" alt="Banner" width="500"/>
+</p
+
+------------
   
 ## 🏗️ Estructura del Proyecto
 
