@@ -64,12 +64,13 @@ git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEP
+sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEP (Revisar el puerto que te abre el Flask)
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 sudo chmod +x /usr/local/bin/cloudflared
 sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 cloudflared --version
-nohup python server.py --host=0.0.0.0 --port=5000 &
+sudo bash start.sh
+sudo bash stop.sh
 ```
 
 
