@@ -8,7 +8,8 @@
 ![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
-##########################
+# 🛡️ CYBERIUS - GEOLOCALIZATOR 🗺️
+Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubicaciones 🛰️.
 
 ---
 
@@ -25,6 +26,41 @@
 Diseñada con un enfoque de ciberseguridad para entornos educativos, empresariales o domésticos.
 
 ---
+## ⚙️ ¿Qué hace?
+
+`CyGeolocalizator` es una aplicación web en Flask que permite:
+
+- 🔐 Login con control de acceso (admin/admin por defecto)
+- 🌍 Captura de IP pública y geolocalización en tiempo real
+- 📸 Captura de imagen desde la cámara del dispositivo
+- 🧠 Registro de coordenadas y timestamp
+- 📊 Visualización de datos en un panel de control estilo Excel
+- 🌐 Exposición segura mediante túnel `trycloudflare.com`
+
+---
+
+## 🏗️ Estructura del Proyecto
+
+```bash
+📁 CyGeolocalizator/
+├── login.html # Página de acceso
+├── main.html # Página de descarga de contenido
+├── panel-de-control.html # Panel con los registros
+├── server.py # Backend Flask
+├── funciones.js # Lógica frontend
+├── estilos.css # Estilos visuales
+├── start.sh / stop.sh # Scripts de ejecución
+├── requirements.txt # Dependencias
+├── fotos.zip # Pack descargable
+└── logs/ # Logs organizados de Flask y Cloudflare
+```
+
+## 💾 Requisitos de la herramienta
+
+- Python 3.8+
+- Navegador con permisos de cámara y geolocalización
+- Dependencias (se instalan solas al lanzar start.sh)
+
 
 ## 📄 Documentación adicional
 
