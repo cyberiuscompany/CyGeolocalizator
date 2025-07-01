@@ -115,7 +115,7 @@ Entar a: https://IP:PUERTO/login.html (Para los usuarios)
 Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```
 
-## ⚙️ 2 Instalación en un sistema cloud con tunel de Cloudflare
+## ⚙️ 2 Instalación en un sistema Cloud con tunel de Cloudflare sobre Unix
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
