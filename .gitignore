@@ -1,0 +1,26 @@
+# ───── Python ─────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# ───── Entornos virtuales ─────
+venv/
+.env/
+.env
+
+# ───── Logs y temporales ─────
+*.log
+*.tmp
+
+# ───── Archivos de compilación / PyInstaller ─────
+build/
+dist/
+*.exe
+
+# ───── Editores / SO ─────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
