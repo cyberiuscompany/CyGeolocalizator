@@ -18,7 +18,6 @@
 
 ---
 
-
 ## Descripción
 
 **CyUSBGuard** #################################. 
@@ -46,6 +45,7 @@ python3 -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
 python server.py
+```
 
 ## ⚙️ 1.2 Instalación básica con clonado 🐧 Linux / macOS
 
