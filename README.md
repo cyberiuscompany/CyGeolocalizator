@@ -1,4 +1,3 @@
-# CyUSBGuard
 
 ![GitHub release downloads](https://img.shields.io/github/downloads/CyberiusCompany/Cyberius-Unzip-Cracker/latest/total)
 ![Versión](https://img.shields.io/badge/versión-1.0.0-blue)
@@ -8,7 +7,7 @@
 ![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
-# 🛡️ CYBERIUS - GEOLOCALIZATOR 🗺️
+# 🗺️ CYGEOLOCALIZATOR 🗺️
 Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubicaciones 🛰️.
 
 ---
