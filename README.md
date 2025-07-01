@@ -73,6 +73,9 @@ python3 -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
 python server.py
+
+Entar a: https://IP:PUERTO/login.html (Para los usuarios)
+Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```
 
 ## ⚙️ 1.2 Instalación básica con clonado 🐧 Linux / macOS
@@ -83,6 +86,9 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python server.py
+
+Entar a: https://IP:PUERTO/login.html (Para los usuarios)
+Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```
 
 ## ⚙️ 2 Instalación en un sistema cloud con tunel de Cloudflare
@@ -99,6 +105,9 @@ sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
 cloudflared --version
 sudo bash start.sh
 sudo bash stop.sh
+
+Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
+Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
 ```
 
 
