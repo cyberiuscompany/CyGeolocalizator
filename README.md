@@ -29,7 +29,32 @@ Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubica
 - 🌐 Exposición segura mediante túnel `trycloudflare.com`
 
 ---
+## CAPTURAS DE LA HERRAMIENTA
 
+## 📸 Deplegando la herramienta
+
+<p align="center">
+  <img src="despliegue_de_la_herramienta.png" alt="Banner" width="900"/>
+</p
+
+## 📸 Login pidiendo permisos de navegador
+
+<p align="center">
+  <img src="herramienta pediendo permisos de ubicacion y camara.png" alt="Banner" width="500"/>
+</p
+
+## 📸 Resultados después del login + Venta de FotoPack Fake (Utilizable)
+
+<p align="center">
+  <img src="resultado tras el login venta de foto pack.png" alt="Banner" width="500"/>
+</p
+
+## 📸 Panel oculto de control de los usuarios ingresados 
+
+<p align="center">
+  <img src="panel control usuarios comprometidos.png" alt="Banner" width="500"/>
+</p
+  
 ## 🏗️ Estructura del Proyecto
 
 ```bash
