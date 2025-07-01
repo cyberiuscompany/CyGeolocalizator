@@ -40,7 +40,7 @@ Diseñada con un enfoque de ciberseguridad para entornos educativos, empresarial
 ## ⚙️ 1.1 Instalación básica con clonado 🪟 Windows
 
 ```bash
-git clone ############
+git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 python3 -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
@@ -50,17 +50,17 @@ python server.py
 ## ⚙️ 1.2 Instalación básica con clonado 🐧 Linux / macOS
 
 ```bash
-git clone #############
+git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 python server.py
 ```
 
-## ⚙️ 2 Instalación como si fuese paquete profesional
+## ⚙️ 2 Instalación en un sistema cloud con tunel de Cloudflare
 
 ```bash
-git clone ######
+git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
