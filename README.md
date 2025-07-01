@@ -18,14 +18,6 @@ Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubica
 </p
 
 ---
-
-## Descripción
-
-**CyUSBGuard** #################################. 
-
-Diseñada con un enfoque de ciberseguridad para entornos educativos, empresariales o domésticos.
-
----
 ## ⚙️ ¿Qué hace?
 
 `CyGeolocalizator` es una aplicación web en Flask que permite:
