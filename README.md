@@ -107,6 +107,7 @@ Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubica
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
+cd CyGeolocalizator
 python3 -m venv venv
 .\venv\Scripts\activate
 pip install -r requirements.txt
@@ -120,6 +121,7 @@ Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
+cd CyGeolocalizator
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
@@ -133,6 +135,7 @@ Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
+cd CyGeolocalizator
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
