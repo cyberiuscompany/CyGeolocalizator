@@ -33,4 +33,4 @@ def serve_file(path):
 if __name__ == '__main__':
     local_ip = socket.gethostbyname(socket.gethostname())
     print(f"\n[+] Accede a la web desde: http://{local_ip}:5000\n")
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=80, debug=True)
