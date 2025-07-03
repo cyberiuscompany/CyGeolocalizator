@@ -169,7 +169,7 @@ Renombralo como:  cloudflared.exe
 cloudflared.exe --version
 cloudflared.exe tunnel --url http://localhost:80
 
-Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
+Entar a: https://DOMINIO-CLOUDFLARED (Para los usuarios/victima)
 Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
 ```
 
