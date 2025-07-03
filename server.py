@@ -20,17 +20,19 @@ def report():
 def get_users():
     return jsonify(users_data)
 
-# Ruta genérica para servir archivos estáticos (como login.html)
 @app.route('/')
 def root():
-    return send_from_directory('.', 'login.html')  # Redirige por defecto a login.html
+    return send_from_directory('.', 'login.html')
 
-# Por si se navega manualmente a /login.html o /main.html
 @app.route('/<path:path>')
 def serve_file(path):
     return send_from_directory('.', path)
 
 if __name__ == '__main__':
-    local_ip = socket.gethostbyname(socket.gethostname())
-    print(f"\n[+] Accede a la web desde: http://{local_ip}:5000\n")
+    if os.environ.get("WERKZEUG_RUN_MAIN") == "true":  # Solo imprime después del reinicio
+        local_ip = socket.gethostbyname(socket.gethostname())
+        print("\n[+] Accede a la web desde:")
+        print(f"   -> http://127.0.0.1:80")
+        print(f"   -> http://{local_ip}:80\n")
+
     app.run(host='0.0.0.0', port=80, debug=True)
