@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import time
 import os
+import socket
 
 app = Flask(__name__, static_folder='.', static_url_path='')
 CORS(app)
@@ -30,4 +31,6 @@ def serve_file(path):
     return send_from_directory('.', path)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    local_ip = socket.gethostbyname(socket.gethostname())
+    print(f"\n[+] Accede a la web desde: http://{local_ip}:5000\n")
+    app.run(host='0.0.0.0', port=5000, debug=True)
