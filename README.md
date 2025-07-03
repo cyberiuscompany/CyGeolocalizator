@@ -155,11 +155,15 @@ Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Étic
 ## ⚙️ 2.2 Instalación en un túnel sobre Windows 🪟 (Para que este público en internet)
 
 ```bash
+# En un primera consola lo siguiente:
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+python server.py
+
+# En un segunda consola lo siguiente:
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe -OutFile cloudflared.exe
 .\cloudflare.exe --version
 .\cloudflared.exe tunnel --url http://localhost:80
