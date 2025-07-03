@@ -132,7 +132,7 @@ Entar a: https://IP:PUERTO/login.html (Para los usuarios)
 Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```
 
-## ⚙️ 2 Instalación en un sistema Cloud con tunel de Cloudflare sobre Unix
+## ⚙️ 2.1 Instalación en un túnel sobre Unix (Para que este público en internet)
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
@@ -152,4 +152,19 @@ Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
 Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
 ```
 
+## ⚙️ 2.2 Instalación en un túnel sobre Windows (Para que este público en internet)
+
+```bash
+git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
+cd CyGeolocalizator
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe -OutFile cloudflared.exe
+.\cloudflare.exe --version
+.\cloudflared.exe tunnel --url http://localhost:80
+
+Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
+Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
+```
 
