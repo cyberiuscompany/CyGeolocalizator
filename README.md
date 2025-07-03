@@ -8,8 +8,8 @@
 ![Uso](https://img.shields.io/badge/uso-solo%20legal-important)
 ![Python](https://img.shields.io/badge/python-3.7%2B-yellow)
 
-# 🗺️ CYGEOLOCALIZATOR 🗺️
-Una herramienta de rastreo ⚔️, inteligencia visual 📷 y análisis de ubicaciones 🛰️.
+# CYGEOLOCALIZATOR
+Una herramienta de rastreo, inteligencia visual  y análisis de ubicaciones.
 
 ---
 
