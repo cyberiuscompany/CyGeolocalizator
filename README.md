@@ -132,7 +132,7 @@ Entar a: https://IP:PUERTO/login.html (Para los usuarios)
 Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```
 
-## ⚙️ 2.1 Instalación en un túnel sobre Unix (Para que este público en internet)
+## ⚙️ 2.1 Instalación en un túnel sobre Unix 🐧 (Para que este público en internet)
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
@@ -152,7 +152,7 @@ Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
 Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
 ```
 
-## ⚙️ 2.2 Instalación en un túnel sobre Windows (Para que este público en internet)
+## ⚙️ 2.2 Instalación en un túnel sobre Windows 🪟 (Para que este público en internet)
 
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
