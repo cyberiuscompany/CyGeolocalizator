@@ -166,8 +166,8 @@ python server.py
 # En una segunda consola lo siguiente:
 Descarga: https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe 
 Renombralo como:  cloudflared.exe
-.\cloudflare.exe --version
-.\cloudflared.exe tunnel --url http://localhost:80
+cloudflared.exe --version
+cloudflared.exe tunnel --url http://localhost:80
 
 Entar a: https://DOMINIO-CLOUDFLARED/login.html (Para los usuarios)
 Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Ético)
