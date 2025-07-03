@@ -164,7 +164,8 @@ pip install -r requirements.txt
 python server.py
 
 # En un segunda consola lo siguiente:
-wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe -OutFile cloudflared.exe
+Descarga: https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-windows-amd64.exe 
+Renombralo como:  cloudflared.exe
 .\cloudflare.exe --version
 .\cloudflared.exe tunnel --url http://localhost:80
 
