@@ -109,8 +109,8 @@ Una herramienta de rastreo, inteligencia visual  y análisis de ubicaciones.
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
-python3 -m venv venv
-.\venv\Scripts\activate
+python3 -m venv venv (No es obligatorio este comando)
+.\venv\Scripts\activate (No es obligatorio este comando)
 pip install -r requirements.txt
 python server.py
 
@@ -123,8 +123,8 @@ Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv venv (No es obligatorio este comando)
+source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
 python server.py
 
@@ -137,8 +137,8 @@ Entar a: https://IP:PUERTO/panel-de-control.html (Para el Hacker Ético)
 ```bash
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv venv (No es obligatorio este comando)
+source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
 sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEP (Revisar el puerto que te abre el Flask)
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
@@ -158,8 +158,8 @@ Entar a: https://DOMINIO-CLOUDFLARED/panel-de-control.html (Para el Hacker Étic
 # En una primera consola lo siguiente:
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv venv (No es obligatorio este comando)
+source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
 python server.py
 
