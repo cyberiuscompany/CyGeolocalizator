@@ -8,7 +8,7 @@
 ![Tested on](https://img.shields.io/badge/tested%20on-Windows%2010%2F11%20%7C%20Ubuntu%2022.04-blue)
 
 <p align="center">
-  <a href="README.md">
+  <a href="https://github.com/cyberiuscompany/CyGeolocalizator">
     <img src="https://flagcdn.com/w40/es.png" alt="Español" title="Español">
     <strong>Español</strong>
   </a>
