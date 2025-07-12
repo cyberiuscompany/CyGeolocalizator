@@ -121,7 +121,7 @@ A tracking, visual intelligence and location analysis tool.
 git clone https://github.com/cyberiuscompany/CyGeolocalizator.git
 cd CyGeolocalizator
 python3 -m venv venv (Optional)
-.env\Scriptsctivate (Optional)
+.\venv\Scripts\activate (Optional)
 pip install -r requirements.txt
 python server.py
 
