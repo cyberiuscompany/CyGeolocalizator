@@ -76,7 +76,7 @@ Una herramienta de rastreo, inteligencia visual  y análisis de ubicaciones.
   <img src="caso con foto de la webcam.png" alt="Banner" width="500"/>
 </p
 
-## 📸 Foto Victima Zoom (Clic Derecha y Ver Foto)
+## 📸 Foto Victima Zoom (Clic Derecho y Ver Foto)
 
 <p align="center">
   <img src="foto zoom.png" alt="Banner" width="500"/>
