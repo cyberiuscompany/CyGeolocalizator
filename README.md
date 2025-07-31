@@ -156,8 +156,8 @@ source venv/bin/activate (No es obligatorio este comando)
 pip install -r requirements.txt
 sudo iptables -A INPUT -p tcp --dport 5000 -j ACCEP (Revisar el puerto que te abre el Flask)
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
-sudo chmod +x /usr/local/bin/cloudflared
 sudo mv cloudflared-linux-amd64 /usr/local/bin/cloudflared
+sudo chmod +x /usr/local/bin/cloudflared
 cloudflared --version
 sudo bash start.sh
 sudo bash stop.sh
